@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title text-center>
+      Trivia App
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <!-- amount: number = 10, category: string = '', difficulty: string = '', type: string = 'multiple' -->
+  <form [formGroup]="form" (submit)="formSubmitted()">
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label>Nº of Questions</ion-label>
+      <ion-select formControlName="amount">
+        <ion-option *ngFor="let number of [5,10,15,20,25,30,35,40,45,50]">{{number}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Categories</ion-label>
+      <ion-select formControlName="categories">
+        <ion-option *ngFor="let c of categories" value="{{c.id}}">{{c.name}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Difficulty</ion-label>
+      <ion-select formControlName="difficulty" >
+        <ion-option value="">All</ion-option>
+        <ion-option value="easy">Easy</ion-option>
+        <ion-option value="medium">Medium</ion-option>
+        <ion-option value="hard">Hard</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Type</ion-label>
+      <ion-select formControlName="type">
+        <ion-option value="">All</ion-option>
+        <ion-option value="multiple">Multiple</ion-option>
+        <ion-option value="boolean">True/false</ion-option>
+      </ion-select>
+    </ion-item>
+
+  </ion-list>
+
+    <div text-center>
+      <button ion-button>Show Questions</button>
+    </div>
+
+  </form>
+
+</ion-content>

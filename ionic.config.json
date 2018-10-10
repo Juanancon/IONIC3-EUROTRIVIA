@@ -1,0 +1,7 @@
+{
+  "name": "triviapp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
