@@ -15,12 +15,20 @@ import { TranslationProvider } from '../providers/translation/translation';
 import { ResultsPage } from "../pages/results/results";
 import { ChartsModule } from "ng2-charts";
 
+// Components
+import { DoughnutComponent } from "../components/doughnut/doughnut";
+import { LinechartComponent } from "../components/linechart/linechart";
+import { BarchartComponent } from "../components/barchart/barchart";
+
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     StarttriviaPage,
-    ResultsPage
+    ResultsPage,
+    DoughnutComponent,
+    LinechartComponent,
+    BarchartComponent
   ],
   imports: [
     BrowserModule,
