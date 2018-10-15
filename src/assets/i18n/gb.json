@@ -1,0 +1,9 @@
+{
+  "HELLO": "Hello",
+  "WELCOME": "Welcome",
+  "GREETING": "Hi, {{ value }}",
+  "LOADING": "We are loading the questions, please wait",
+  "LOADING2": "Loading... Please wait",
+  "START": "START",
+  "THEMES ANSWERED": ""
+}

@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title text-center>
+      {{"STATISTICS" | translate}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <!--<div text-center>
+    <h3>Estadísticas</h3>
+  </div>-->
+
+  <doughnut [result]="respuestas"></doughnut>
+  <barchart [genres]="results"></barchart>
+
+  <div text-center="">
+    <button ion-button (click)="startAgain()">
+      Start Again
+    </button>
+  </div>
+
+</ion-content>

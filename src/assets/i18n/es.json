@@ -1,0 +1,10 @@
+{
+  "HELLO": "Hola",
+  "WELCOME": "Bienvenido",
+  "GREETING": "Hola, {{ value }}",
+  "LOADING": "Estamos cargando las putas preguntas, espera coño",
+  "LOADING2": "Cargando",
+  "START": "EMPEZAR",
+  "STATISTICS": "Estadísticas"
+
+}

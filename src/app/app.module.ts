@@ -1,23 +1,37 @@
+// Basic imports
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
+// Pages
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { TriviaProvider } from '../providers/trivia/trivia';
-import { HttpClientModule } from "@angular/common/http";
-import { IonicStorageModule } from "@ionic/storage";
+import { ChooselangPage } from "../pages/chooselang/chooselang";
+import { ResultsPage } from "../pages/results/results";
 import { StarttriviaPage } from "../pages/starttrivia/starttrivia";
+
+// Providers
+import { TriviaProvider } from '../providers/trivia/trivia';
+import { IonicStorageModule } from "@ionic/storage";
 import { AlertProvider } from '../providers/alert/alert';
 import { TranslationProvider } from '../providers/translation/translation';
-import { ResultsPage } from "../pages/results/results";
+
+// Angular plugins
 import { ChartsModule } from "ng2-charts";
+
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
+
 
 // Components
 import { DoughnutComponent } from "../components/doughnut/doughnut";
-import { LinechartComponent } from "../components/linechart/linechart";
 import { BarchartComponent } from "../components/barchart/barchart";
 
 @NgModule({
@@ -26,8 +40,8 @@ import { BarchartComponent } from "../components/barchart/barchart";
     HomePage,
     StarttriviaPage,
     ResultsPage,
+    ChooselangPage,
     DoughnutComponent,
-    LinechartComponent,
     BarchartComponent
   ],
   imports: [
@@ -35,14 +49,22 @@ import { BarchartComponent } from "../components/barchart/barchart";
     HttpClientModule,
     ChartsModule,
     IonicStorageModule.forRoot(),
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [HttpClient]
+      }
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
     StarttriviaPage,
-    ResultsPage
+    ResultsPage,
+    ChooselangPage
   ],
   providers: [
     StatusBar,

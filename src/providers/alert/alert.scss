@@ -1,0 +1,62 @@
+page-alert{
+
+}
+//La clase del alert tiene que ir fuera del scss de la página
+//Para utilizar esta clase en el alert => cssClass: 'toastclase'
+.toastclase {
+
+  //color:white !important;
+  //background:black; //si quieres qu el fondo de fuera sea negro
+
+  //Título
+  .alert-head {
+    color:white;
+    text-align: center;
+    // border-bottom: 1px solid white;
+  }
+
+
+  //Botón
+  button {
+    text-align: center;
+    margin:0 auto !important;
+    color:white !important; // button text color
+    background-color: transparent !important;
+    //padding-right: 20% !important;
+    // padding-left: 20% !important;
+    //border-radius: 10px !important;
+    font-weight: bold !important;
+    //opacity:0.6;
+    //width: 100%;
+    //button bg color
+    font-size:130% !important;
+  }
+
+  //Mensaje, debajo del título
+  .alert-message {
+    color: white;
+    margin-top:5% !important;
+  }
+
+  //Tratar toda la caja del alert
+  .alert-wrapper {
+    border: 2px solid white;
+    margin-top:5% !important;
+    text-align: center;
+    border-radius: 50px !important;
+    // border-top-right-radius: 30px!important;
+    // border-top-left-radius: 30px!important;
+    text-shadow: horizontal-offset vertical-offset blur color;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    background-image: linear-gradient(to bottom right, #36D1DC, #5B86E5); // bg color of alert content
+  }
+
+  //Caja de botones, por si hay más de un botón y quieres
+  //tratar la caja, o si por ejemplo quieres hacer un borde en la caja
+  .alert-button-group{
+    //background: white;
+
+    border-top: 2px solid white;
+  }
+}
+

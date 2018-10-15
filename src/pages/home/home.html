@@ -8,7 +8,6 @@
 
 <ion-content padding>
 
-  <!-- amount: number = 10, category: string = '', difficulty: string = '', type: string = 'multiple' -->
   <form [formGroup]="form" (submit)="formSubmitted()">
 
   <ion-list>
@@ -49,7 +48,7 @@
   </ion-list>
 
     <div text-center>
-      <button ion-button>Show Questions</button>
+      <button ion-button>{{ "START" | translate }}</button>
     </div>
 
   </form>

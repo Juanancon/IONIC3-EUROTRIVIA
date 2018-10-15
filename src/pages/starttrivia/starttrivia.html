@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title text-center>
+      Game
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-slides>
+      <ion-slide *ngFor="let item of answers">
+        <div [innerHTML]="item.question"></div>
+        <div text-center (click)="buttonClick(options)" *ngFor="let options of item.options">
+          <button ion-item>
+            <span [innerHTML]="options.answer"></span>
+          </button>
+        </div>
+      </ion-slide>
+    </ion-slides>
+
+
+</ion-content>

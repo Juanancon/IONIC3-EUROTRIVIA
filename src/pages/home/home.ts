@@ -5,6 +5,7 @@ import { Storage } from '@ionic/storage';
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { StarttriviaPage } from "../starttrivia/starttrivia";
 import { AlertProvider } from "../../providers/alert/alert";
+import { TranslateService } from "@ngx-translate/core";
 
 @Component({
   selector: 'page-home',
@@ -20,7 +21,8 @@ export class HomePage implements OnInit {
               public triviaP : TriviaProvider,
               private storage: Storage,
               private formBuilder: FormBuilder,
-              private alertS: AlertProvider) {
+              private alertS: AlertProvider,
+              private translateService: TranslateService,) {
 
     this.storage.set('language', 'es');
 

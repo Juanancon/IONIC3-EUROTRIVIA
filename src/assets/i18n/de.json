@@ -1,0 +1,11 @@
+{
+  "HELLO": "Hallo",
+  "WELCOME": "Herzlich willkommen",
+  "GREETING": "Hallo, {{ value }}",
+  "LOADING": "Wir laden die Fragen, bitte warten",
+  "LOADING2": "Laden...",
+  "START": "START",
+  "STATISTICS": "STATISTICS"
+
+
+}
